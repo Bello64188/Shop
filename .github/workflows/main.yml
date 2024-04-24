@@ -1,6 +1,6 @@
 # This is basic workflow to help you get started with Actions
 
-name: CI
+name: Basic CI
 
 #Control when the workflow will run
 
@@ -19,20 +19,14 @@ on:
 # A workflow run is made up of one or more jobs
 jobs:
   #This job check out code from repo
-  checkout:
+  build:
     # The typ of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest.
 
     # steps represent a sequence of tasks that will be executed as part of the job
     steps:
       #Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-  process:
-    # The type off runner that the job will run on
-    runs-on: ubuntu-latest 
-
-    #Steps are a sequence of tasks executed as part of a job
-    steps:
+      - uses: actions/checkout@v4  
 
       #Runs a single command using the runner shell
       - name: Run a one-line script
